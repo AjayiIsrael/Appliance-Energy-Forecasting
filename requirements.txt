@@ -1,0 +1,22 @@
+# Core pipeline (Parts 1-6) -- install these first, they are lightweight
+numpy
+pandas
+matplotlib
+scipy
+statsmodels
+scikit-learn
+xgboost
+lightgbm
+
+# Part 7 (foundation model) -- optional, heavier (pulls in PyTorch).
+# Install with a PLAIN command and let pip resolve compatible versions
+# together. Do NOT manually pin an old exact transformers version next to
+# it -- that combination is what breaks the import (see the comment above
+# run_chronos_backtest() in the script for the full explanation).
+#
+#   pip install chronos-forecasting
+#
+# If you don't have a GPU, that's fine -- the script auto-detects and runs
+# on CPU (slower, but Part 7's context windows are short enough it's not
+# painful). If you don't want to install this at all, just run the script
+# with --skip-chronos and Part 7 is skipped cleanly.
